@@ -11,3 +11,15 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: #CCC;
 }
+
+a {
+    color: #6CF
+}
+
+a:visited {
+    color: #3CC
+}
+
+a:hover {
+    color: #F66;
+}
