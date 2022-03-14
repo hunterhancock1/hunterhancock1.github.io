@@ -1,16 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+  
 body {
-    background-color: #333;
+    background-color: #EEE;
     margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #CCC;
+    font-family: Georgia, serif;
+    color: #333;
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #CCC;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
+}
+
+a {
+    font-weight: bold;
 }
 
 a:link {
@@ -25,31 +33,49 @@ a:hover {
     color: #F66;
 }
 
-ul {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #CCC;
-  }
-  
-li {
-    float: left;
-}
-  
-li a {
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-}
-  
-li a:hover {
-    background-color: #F66;
 }
 
-.active {
-    background-color: #6CF;
+.menu li {
+    padding: 5px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+@media only screen and (max-width:700px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    #spacer {display: none;}
+}
+
+@media only screen and (min-width:700px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    #spacer {display: block;}
 }
