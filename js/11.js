@@ -4,8 +4,13 @@ function clickButton() {
     document.getElementById("e1p").innerHTML = "You clicked the button! Nice!";
 }
 
-document.getElementById("e2").addEventListener("click", hoverImage);
+document.getElementById("e2").addEventListener("mouseover", hoverOn);
+document.getElementById("e2").addEventListener("mouseout", hoverOff);
 
-function hoverImage() {
-    document.getElementById("ep2").innerHTML = "Keep my wife's name out your f*cking mouth";
+function hoverOn() {
+    document.getElementById("e2p").innerHTML = "Keep my wife's name out your f*cking mouth";
+}
+
+function hoverOff() {
+    document.getElementById("e2p").innerHTML = "Element 2: Hover over the image"
 }
