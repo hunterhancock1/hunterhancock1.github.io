@@ -19,12 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(data);
         }
 
-        copy.textContent = "Copy text to clipboard"
+        copy.textContent = "Copy quote to clipboard"
         document.getElementById("copyQuote").style.display= "block";
 
         copyButton.addEventListener("click", copyContnet);
         function copyContnet() {
-        
+            navigator.clipboard.writeText(data.content);
+            result.textContent = "Quote copied to clipboard"
         }
     }  
 
