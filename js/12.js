@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("newQuote");
     const quote = document.getElementById("quote");
     const author = document.getElementById("author");
-    const more = document.getElementById("moreInfo");
-    const info = document.getElementById("info");
+
+    const copy = document.getElementById("copy");
+    const copyButton = document.getElementById("copyQuote");
+    const result = document.getElementById("result");
   
     async function updateQuote() {
         const response = await fetch("https://api.quotable.io/random");
@@ -17,16 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(data);
         }
 
-        more.textContent = "More information about the author"
-    }
+        copy.textContent = "Copy text to clipboard"
+        document.getElementById("copyQuote").style.display= "block";
 
-    async function giveMoreInfo() {
-        const response2 = await fetch();
-        const data2 = await response2.json();
-    }
+        copyButton.addEventListener("click", copyContnet);
+        function copyContnet() {
+        
+        }
+    }  
+
 
     button.addEventListener("click", updateQuote);
 
-    more.addEventListener("click", giveMoreInfo);
 });
   
