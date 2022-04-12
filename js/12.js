@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         copyButton.addEventListener("click", copyContnet);
         function copyContnet() {
-            navigator.clipboard.writeText(data.content);
+            navigator.clipboard.writeText(data.content + " -" + data.author);
             result.textContent = "Quote copied to clipboard"
         }
     }  
