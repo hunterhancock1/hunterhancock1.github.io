@@ -45,6 +45,18 @@ a:hover {
     font-family: Helvetica, sans-serif;
 }
 
+label {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.story {
+    background: #333;
+    color: #EEE;
+    padding: 10px;
+    visibility: hidden;
+}
+
 
 .row::after {
     content: "";
