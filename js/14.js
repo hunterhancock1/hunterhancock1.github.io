@@ -35,7 +35,7 @@ let company = {
     "employees": employees.data
 }
 
-console.log("Problem 2: ");
+console.log("Problem 22: ");
 console.log(company);
 
 // Problem 3
@@ -51,7 +51,7 @@ function addEmployee(fname, dept, desig, salary, raise, json, comp) {
     comp.employees = json.data;
 }
 
-addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data, company);
+addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
 console.log("Problem 3: ");
 console.log(company);
 
