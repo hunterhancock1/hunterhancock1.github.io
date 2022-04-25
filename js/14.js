@@ -51,7 +51,7 @@ function addEmployee(fname, dept, desig, salary, raise, json, comp) {
     comp.employees.data = json.data;
 }
 
-// addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
+addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
 console.log("Problem 3: ");
 console.log(company);
 
