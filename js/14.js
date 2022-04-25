@@ -32,7 +32,7 @@ console.log(employees);
 let company = {
     "cname": "Tech Stars",
     "website": "www.techstars.site",
-    "employees": employees
+    "employees": employees.data
 }
 
 console.log("Problem 2: ");
