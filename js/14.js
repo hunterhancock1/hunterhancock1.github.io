@@ -47,10 +47,10 @@ function addEmployee(fname, dept, desig, salary, raise, empl) {
         "salary": salary,
         "raise": raise
     };
-    empl.push(employee);
+    empl['data'].push(employee);
 }
 
-addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data);
+addEmployee("Anna", "Tech", "Executive", 25600, false, employees);
 console.log("Problem 3: ");
 console.log(employees);
 company.employees = employees; 
