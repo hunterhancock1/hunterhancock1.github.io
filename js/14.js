@@ -39,7 +39,7 @@ console.log("Problem 2: ");
 console.log(company);
 
 // Problem 3
-function addEmployee(fname, dept, desig, salary, raise, json, comp) {
+function addEmployee(fname, dept, desig, salary, raise, empl, comp) {
     let employee = {
         "fname": fname,
         "dept": dept,
@@ -47,11 +47,11 @@ function addEmployee(fname, dept, desig, salary, raise, json, comp) {
         "salary": salary,
         "raise": raise
     };
-    json.push(employee);
-    comp.employees.data = json.data;
+    empl.data.push(employee);
+    comp.employees.data = empl.data;
 }
 
-addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
+addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data, company);
 console.log("Problem 3: ");
 console.log(company);
 
