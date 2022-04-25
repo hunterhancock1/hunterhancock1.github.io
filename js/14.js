@@ -69,14 +69,13 @@ console.log("Problem 4: ");
 console.log(total);
 
 // Problem 5
-function giveRaise(comp, empl) {
+function giveRaise(comp) {
     for (var i = 0; i < 4; i++) {
         if (comp.employees.data[i].raise) {
             comp.employees.data[i].salary = comp.employees.data[i].salary * 1.1;
             comp.employees.data[i].raise = false;
         }        
     }
-    empl.data = comp.employees.data;
 }
 
 giveRaise(company);
