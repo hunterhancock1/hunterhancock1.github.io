@@ -35,7 +35,7 @@ let company = {
     "employees": employees.data
 }
 
-console.log("Problem 22: ");
+console.log("Problem 2: ");
 console.log(company);
 
 // Problem 3
@@ -58,7 +58,7 @@ console.log(company);
 // Problem 4
 function totalSalary(comp) {
     sum = 0;
-    for (var i = 0; i < comp.employees.length; i++) {
+    for (var i = 0; i < 4; i++) {
         sum = sum + comp.employees[i].salary;
     }
     return sum;
@@ -70,7 +70,7 @@ console.log(total);
 
 // Problem 5
 function giveRaise(comp, empl) {
-    for (var i = 0; i < comp.employees.length; i++) {
+    for (var i = 0; i < 4; i++) {
         if (comp.employees[i].raise) {
             comp.employees[i].salary = comp.employees[i].salary * 1.1;
             comp.employees[i].raise = false;
