@@ -39,7 +39,7 @@ console.log("Problem 2: ");
 console.log(company);
 
 // Problem 3
-function addEmployee(fname, dept, desig, salary, raise, empl, comp) {
+function addEmployee(fname, dept, desig, salary, raise, empl) {
     let employee = {
         "fname": fname,
         "dept": dept,
@@ -48,12 +48,12 @@ function addEmployee(fname, dept, desig, salary, raise, empl, comp) {
         "raise": raise
     };
     empl.data.push(employee);
-    comp.employees.data = empl.data;
 }
 
-addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data, company);
+addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data);
 console.log("Problem 3: ");
-console.log(company);
+console.log(employees);
+company.employees = employees; 
 
 // Problem 4
 function totalSalary(comp) {
