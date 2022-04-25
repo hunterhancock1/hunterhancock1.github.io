@@ -32,11 +32,12 @@ console.log(employees);
 let company = {
     "cname": "Tech Stars",
     "website": "www.techstars.site",
-    "employees": employees['data']
+    "employees": employees.data
 }
 
 console.log("Problem 2: ");
 console.log(company);
+console.log(employees.data);
 
 // Problem 3
 function addEmployee(fname, dept, desig, salary, raise, json, comp) {
