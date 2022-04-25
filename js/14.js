@@ -53,7 +53,7 @@ function addEmployee(fname, dept, desig, salary, raise, empl) {
 addEmployee("Anna", "Tech", "Executive", 25600, false, employees);
 console.log("Problem 3: ");
 console.log(employees);
-company.employees = employees; 
+// company.employees = employees; 
 
 // Problem 4
 function totalSalary(comp) {
@@ -89,5 +89,5 @@ employees.data[2]["wfh"] = false;
 employees.data[3]["wfh"] = true;
 company.employees.data = employees.data;
 
-console.log("Problem 5: ");
+console.log("Problem 6: ");
 console.log(company);
