@@ -47,7 +47,7 @@ function addEmployee(fname, dept, desig, salary, raise, empl) {
         "salary": salary,
         "raise": raise
     };
-    empl.data.push(employee);
+    empl.push(employee);
 }
 
 addEmployee("Anna", "Tech", "Executive", 25600, false, employees.data);
