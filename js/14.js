@@ -32,12 +32,11 @@ console.log(employees);
 let company = {
     "cname": "Tech Stars",
     "website": "www.techstars.site",
-    "employees": employees.data
+    "employees": employees
 }
 
 console.log("Problem 2: ");
 console.log(company);
-console.log(employees.data);
 
 // Problem 3
 function addEmployee(fname, dept, desig, salary, raise, json, comp) {
@@ -49,10 +48,10 @@ function addEmployee(fname, dept, desig, salary, raise, json, comp) {
         "raise": raise
     };
     json.push(employee);
-    comp.employees = json.data;
+    comp.employees.data = json.data;
 }
 
-addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
+// addEmployee("Anna", "Tech", "Executive", 25600, false, employees['data'], company);
 console.log("Problem 3: ");
 console.log(company);
 
@@ -60,7 +59,7 @@ console.log(company);
 function totalSalary(comp) {
     sum = 0;
     for (var i = 0; i < 4; i++) {
-        sum = sum + comp.employees[i].salary;
+        sum = sum + comp.employees.data[i].salary;
     }
     return sum;
 }
@@ -72,12 +71,12 @@ console.log(total);
 // Problem 5
 function giveRaise(comp, empl) {
     for (var i = 0; i < 4; i++) {
-        if (comp.employees[i].raise) {
-            comp.employees[i].salary = comp.employees[i].salary * 1.1;
-            comp.employees[i].raise = false;
+        if (comp.employees.data[i].raise) {
+            comp.employees.data[i].salary = comp.employees.data[i].salary * 1.1;
+            comp.employees.data[i].raise = false;
         }        
     }
-    empl.data = comp.employees;
+    empl.data = comp.employees.data;
 }
 
 giveRaise(company);
@@ -89,7 +88,7 @@ employees.data[0]["wfh"] = true;
 employees.data[1]["wfh"] = false;
 employees.data[2]["wfh"] = false;
 employees.data[3]["wfh"] = true;
-company.employees = employees.data;
+company.employees.data = employees.data;
 
 console.log("Problem 5: ");
 console.log(company);
