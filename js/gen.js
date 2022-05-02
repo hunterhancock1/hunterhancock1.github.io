@@ -104,6 +104,6 @@ function generate(){
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
     var myBase = ing.base[Math.floor(Math.random() * 5)];
-    document.getElementById("field").innerHTML = myBase.splash + " prot: " + numProt + " topp: " + numTopp;
+    document.getElementById("field").innerHTML = "In a " + myBase.splash + ", add " + numProt + " proteins and " + numTopp + " toppings.";
 }
 
