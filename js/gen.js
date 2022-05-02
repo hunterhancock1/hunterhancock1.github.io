@@ -108,9 +108,15 @@ let ing = {
     ]
 }
 
-var vegtf = document.getElementById("yv").value;
+// var vegtf = document.getElementById("v").value;
+
+$('#v').on('change', function(){
+    $('#hv').val(this.checked ? 1 : 0);
+ });
 
 const gbutton = document.getElementById("gbutton");
+
+
 
 gbutton.addEventListener("click", generate);
 
@@ -132,7 +138,7 @@ function generate(){
         numTopp--;
     }
 
-    console.log(vegtf);
+    console.log(v);
 
 }
 
