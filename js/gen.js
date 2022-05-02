@@ -147,7 +147,7 @@ function generate(){
         numTopp--;
     }
     var myToppsStr = myTopps[0].splash;
-    for (let i = 0; i < myTopps.length; i++){
+    for (let i = 1; i < myTopps.length; i++){
         myToppsStr += ", " + myTopps[i].splash;     
     }
 
