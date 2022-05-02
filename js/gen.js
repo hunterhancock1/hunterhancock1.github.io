@@ -33,22 +33,6 @@ let ing = {
     ],
     "protein": [
         {
-            "id": "ground beef",
-            "v": false,
-            "splash": "Seasoned ground beef"
-        },
-        {
-            "id": "chicken",
-            "v": false,
-            "splash": "Grilled chicken" 
-
-        },
-        {
-            "id": "steak",
-            "v": false,
-            "splash": "Grilled steak" 
-        },
-        {
             "id": "potato",
             "v": true,
             "splash": "Potatoes"
@@ -58,6 +42,21 @@ let ing = {
             "v": true,
             "splash": "Black beans"
         },
+        {
+            "id": "ground beef",
+            "v": false,
+            "splash": "Seasoned ground beef"
+        },
+        {
+            "id": "chicken",
+            "v": false,
+            "splash": "Grilled chicken" 
+        },
+        {
+            "id": "steak",
+            "v": false,
+            "splash": "Grilled steak" 
+        }
     ],
     "topping": [
         {
@@ -124,17 +123,38 @@ function generate(){
     document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
 
     var myProts = [];
-    while (numProt) {
-        myProts.push(ing.protein[Math.floor(Math.random() * 5)]);
-        numProt--;
+    if(myVeg){
+        while (numProt) {
+            myProts.push(ing.protein[Math.floor(Math.random() * 2)]);
+            numProt--;
+        }
     }
+    else{
+        while (numProt) {
+            myProts.push(ing.protein[Math.floor(Math.random() * 5)]);
+            numProt--;
+        }
+    }
+    
     var myTopps = [];
     while (numTopp) {
         myTopps.push(ing.topping[Math.floor(Math.random() * 9)]);
         numTopp--;
     }
 
-    console.log(myVeg);
+    document.getElementById("prot").innerHTML = "Add the following protiens in order: "
+    document.getElementById("prot").innerHTML += myProts[0].splash;
+    for (let i = 1; i < numProt; i++){
+        document.getElementById("prot").innerHTML += ", " + myProts[i].splash;
+    }
+    document.getElementById("prot").innerHTML += ".";
+
+    document.getElementById("topp").innerHTML = "Then, add the following toppings in order: "
+    document.getElementById("topp").innerHTML += myTopps[0].splash;
+    for (let i = 0; i < numTopp; i++){
+        document.getElementById("topp").innerHTML += ", " + myTopps[i].splash;     
+    }
+    //console.log(myVeg);
 
 }
 
