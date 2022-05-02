@@ -132,7 +132,7 @@ function generate(){
         numTopp--;
     }
 
-    console.log(myTopps);
+    console.log(vegtf);
 
 }
 
