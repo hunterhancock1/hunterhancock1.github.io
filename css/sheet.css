@@ -33,6 +33,10 @@ a:hover {
     color: #F66;
 }
 
+input[type="range"] {
+    width:400px;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
