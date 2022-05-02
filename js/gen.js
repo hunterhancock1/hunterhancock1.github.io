@@ -98,11 +98,12 @@ var vegF = document.getElementById("nv");
 
 const gbutton = document.getElementById("gbutton");
 
-async function generate(){
-    var numProt = document.getElementById("numProt");
-    var numTopp = document.getElementById("numTopp");  
+function generate(){
+    var numProt = +document.getElementById("numProt");
+    var numTopp = +document.getElementById("numTopp");  
     var myBase = ing.base[Math.floor(Math.random() * 5)];
 
     document.getElementById("field").innerHTML = myBase.splash + " prot: " + numProt + " topp: " + numTopp;
 }
+
 gbutton.addEventListener("click", generate());
