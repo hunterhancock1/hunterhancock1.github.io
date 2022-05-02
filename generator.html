@@ -39,12 +39,16 @@
                 <h4>Number of Toppings</h4>
                 <form>
                     <input type="range" min="1" max="9" value="0" class="slider" id="numTopp" oninput="this.nextElementSibling.value = this.value">
-                    <output>0</output>
+                    <output>1</output>
                 </form>
                 <br>
                 <button id="gbutton">Generate</button>
+
                 <p id="base"></p>
                 <p id="topp"></p>
+
+                <button id="share">Copy to Clipboard</button>
+                <p id="stext"></p>
 
                 <div id="topppng">
                     <p id="topp0"></p>
