@@ -68,6 +68,14 @@ label {
     display: table;
 }
 
+#topppng {
+    display: inline-block;
+}
+
+#protpng {
+    display: inline-block;
+}
+
 [class*="col-"] {
     float: left;
     padding: 10px;

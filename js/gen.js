@@ -41,79 +41,94 @@ let ing = {
         {
             "id": "potato",
             "v": true,
-            "splash": "Potatoes"
+            "splash": "Potatoes",
+            "src": './img/gen/potato.png'
         },
         {
             "id": "bbean",
             "v": true,
-            "splash": "Black Beans"
+            "splash": "Black Beans",
+            "src": './img/gen/bbeans.png'
         },
         {
             "id": "rbean",
             "v": true,
-            "splash": "Refried Beans"
+            "splash": "Refried Beans",
+            "src": './img/gen/rbeans.png'
         },
         {
             "id": "groundbeef",
             "v": false,
-            "splash": "Seasoned Ground Beef"
+            "splash": "Seasoned Ground Beef",
+            "src": './img/gen/beef.png'
         },
         {
             "id": "chicken",
             "v": false,
-            "splash": "Grilled Chicken" 
+            "splash": "Grilled Chicken",
+            "src": './img/gen/chicken.png'
         },
         {
             "id": "steak",
             "v": false,
-            "splash": "Grilled Steak" 
+            "splash": "Grilled Steak",
+            "src": './img/gen/steak.png' 
         }
     ],
     "topping": [
         {
             "id": "cheese",
             "v": true,
-            "splash": "Shredded Cheese"
+            "splash": "Shredded Cheese",
+            "src": './img/gen/cheese.png'
         },
         {
             "id": "lettuce",
             "v": true,
-            "splash": "Lettuce"
+            "splash": "Lettuce",
+            "src": './img/gen/lettuce.png'
         },
         {
             "id": "tomato",
             "v": true,
-            "splash": "Tomatoes"
+            "splash": "Tomatoes",
+            "src": './img/gen/tomatoes.png'
         },
         {
             "id": "bbeans",
             "v": true,
-            "splash": "Black Beans"
+            "splash": "Black Beans",
+            "src": './img/gen/bbeans.png'
         },
         {
             "id": "rbeans",
             "v": true,
-            "splash": "Refried Beans"
+            "splash": "Refried Beans",
+            "src": './img/gen/rbeans.png'
         },
         {
-            "id": "sour cream",
+            "id": "sourcream",
             "v": true,
-            "splash": "Sour Cream"
+            "splash": "Sour Cream",
+            "src": './img/gen/scream.png'
         },
         {
-            "id": "nacho cheese",
+            "id": "nachocheese",
             "v": true,
-            "splash": "Nacho Cheese Sauce"
+            "splash": "Nacho Cheese Sauce",
+            "src": './img/gen/nacho.png'
         },
         {
             "id": "red sauce",
             "v": true,
-            "splash": "Red Sauce"
+            "splash": "Red Sauce",
+            "src": './img/gen/red.png'
         },
         {
             "id": "guac",
             "v": true,
-            "splash": "Guacamole"
+            "splash": "Guacamole",
+            "src": './img/gen/guac.png'
         }
     ]
 }
@@ -162,15 +177,27 @@ function generate(){
         myToppsStr += ", " + myTopps[i].splash;     
     }
 
-    document.getElementById("prot").innerHTML = "Add the following protiens in order: ";
+    document.getElementById("prot").innerHTML = "Add the following protiens: ";
     document.getElementById("prot").innerHTML += myProtsStr;
 
-    document.getElementById("topp").innerHTML = "Then, add the following toppings in order: ";
+    document.getElementById("topp").innerHTML = "Then, add the following toppings: ";
     document.getElementById("topp").innerHTML += myToppsStr;
 
-    var myimg = document.createElement('img');
-    myimg.src = myBase.src;
-    document.getElementById("topp").appendChild(myimg);
+    for (let i = 0; i < myTopps.length; i++){
+        var toppimg = document.createElement('img');
+        toppimg.src = myTopps[i].src;
+        document.getElementById('topp0').appendChild(toppimg);
+    }
+
+    for (let i = 0; i < myProts.length; i++){
+        var protimg = document.createElement('img');
+        protimg.src = myProts[i].src;
+        document.getElementById('prot0').appendChild(protimg);
+    }
+
+    var baseimg = document.createElement('img');
+    baseimg.src = myBase.src;
+    document.getElementById("protpng").appendChild(baseimg);
     
     console.log(myVeg);
 
