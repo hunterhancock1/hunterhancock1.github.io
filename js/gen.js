@@ -108,7 +108,7 @@ let ing = {
     ]
 }
 
-var vegtf = document.getElementById("yv");
+var vegtf = document.getElementById("yv").value;
 
 const gbutton = document.getElementById("gbutton");
 
