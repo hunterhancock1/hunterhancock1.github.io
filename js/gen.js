@@ -98,7 +98,8 @@ var vegF = document.getElementById("nv");
 var numProt = document.getElementById("numProt");
 var numTopp = document.getElementById("numTopp");
 
-function generate(v) {
+function generate(v, numProt, numTopp) {
+    console.log(vegT, vegF, numProt, numTopp);
     const base = Math.floor(Math.random() * 6); // ind of base
     if(v) { // vegetarian
         var prot = Math.floor(Math.random() * 5); // ind of prot (1-5)
@@ -109,7 +110,12 @@ function generate(v) {
     
     var toppings = [];
     var sauces = [];
-
 }
 
-console.log(vegT, vegF, numProt, numTopp);
+var inputElement = document.createElement('input');
+inputElement.type = "button"
+inputElement.addEventListener('click', function(){
+    // func
+});
+
+​document.body.appendChild(inputElement);​

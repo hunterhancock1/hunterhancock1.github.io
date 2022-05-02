@@ -24,19 +24,19 @@
                 <h1>Taco Bell Menu Item Generator</h1>
                 <p>Select your options and press Generate to create a new Taco Bell menu item.</p>
                 <h4>Vegetarian</h4>
-                <form id="vopt">
-                    <input type="radio" id="yv" name="veg" value="1">
+                <form>
+                    <input type="checkbox" id="yv" name="veg" value="1">
                     <label for="1">Yes</label>
-                    <input type="radio" id="nv" name="veg" value="0">
-                    <label for="0">No</label>
                 </form>
                 <h4>Number of Base Proteins</h4>
                 <form>
-                    <input type="range" min="0" max="5" value="1" class="slider" id="numProt">
+                    <input type="range" min="0" max="5" value="1" class="slider" id="numProt" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
                 </form>
                 <h4>Number of Toppings</h4>
                 <form>
-                    <input type="range" min="0" max="9" value="0" class="slider" id="numTopp">
+                    <input type="range" min="0" max="9" value="0" class="slider" id="numTopp" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
                 </form>
             </div>
 
