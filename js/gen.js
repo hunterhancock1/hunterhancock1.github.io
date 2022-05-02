@@ -119,7 +119,7 @@ function generate(){
     var numTopp = document.getElementById("numTopp").value;  
     var myBase = ing.base[Math.floor(Math.random() * 6)];
 
-    document.getElementById("field").innerHTML = "In a " + myBase.splash + ":";
+    document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
 
     var myProts = [];
     while (numProt) {
