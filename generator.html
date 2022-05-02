@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Taco Bell Menu Item Generator</title>
+        <link rel="stylesheet" href="./css/sheet.css">
+        <script defer src="../js/gen.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-2"></div>
+
+            <div class="col-2 menu">
+                <h1 id="spacer"> &nbsp; </h1>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT ME</a></li>
+                    <li><a href="./projects.html">PROJECTS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <h1>Taco Bell Menu Item Generator</h1>
+                <p>Select your options and press Generate to create a new Taco Bell menu item.</p>
+                <h4>Vegetarian</h4>
+                <form id="vopt">
+                    <input type="radio" id="yv" name="veg" value="1">
+                    <label for="1">Yes</label>
+                    <input type="radio" id="nv" name="veg" value="0">
+                    <label for="0">No</label>
+                </form>
+                <h4>Number of Base Proteins</h4>
+                <form>
+                    <input type="range" min="0" max="5" value="1" class="slider" id="numProt">
+                </form>
+                <h4>Number of Toppings</h4>
+                <form>
+                    <input type="range" min="0" max="9" value="0" class="slider" id="numTopp">
+                </form>
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+    </body>
+</html>
