@@ -110,19 +110,15 @@ let ing = {
 
 // var vegtf = document.getElementById("v").value;
 
-$('#v').on('change', function(){
-    $('#hv').val(this.checked ? 1 : 0);
- });
-
 const gbutton = document.getElementById("gbutton");
-
-
 
 gbutton.addEventListener("click", generate);
 
 function generate(){
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
+
+    var myVeg = document.querySelector('input[name=veg]:checked').value;
     var myBase = ing.base[Math.floor(Math.random() * 6)];
 
     document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
@@ -138,7 +134,7 @@ function generate(){
         numTopp--;
     }
 
-    console.log(v);
+    console.log(myVeg);
 
 }
 
