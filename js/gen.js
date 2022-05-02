@@ -3,32 +3,38 @@ let ing = {
         {
             "id": "staco",
             "v": true,
-            "splash": "Soft Taco Shell"
+            "splash": "Soft Taco Shell",
+            "src": './img/gen/staco.png'
         },
         {
             "id": "ctaco",
             "v": true,
-            "splash": "Crunchy Taco Shell"
+            "splash": "Crunchy Taco Shell",
+            "src": './img/gen/ctaco.png'
         },
         {
             "id": "burrito",
             "v": true,
-            "splash": "Burrito"
+            "splash": "Burrito",
+            "src": './img/gen/burrito.png'
         },
         {
             "id": "chalupa",
             "v": true,
-            "splash": "Chalupa Shell"
+            "splash": "Chalupa Shell",
+            "src": './img/gen/chalupa.png'
         },
         {
             "id": "bowl",
             "v": true,
-            "splash": "Bowl"
+            "splash": "Bowl",
+            "src": './img/gen/bowl.png'
         },
         {
             "id": "quesadilla",
             "v": true,
-            "splash": "Quesadilla"
+            "splash": "Quesadilla",
+            "src": './img/gen/quesadilla.png'
         },
     ],
     "protein": [
@@ -161,6 +167,10 @@ function generate(){
 
     document.getElementById("topp").innerHTML = "Then, add the following toppings in order: ";
     document.getElementById("topp").innerHTML += myToppsStr;
+
+    var myimg = document.createElement('img');
+    myimg.src = myBase.src;
+    document.getElementById("topp").appendChild(myimg);
     
     console.log(myVeg);
 
