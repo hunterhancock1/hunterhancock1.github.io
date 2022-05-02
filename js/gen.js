@@ -135,14 +135,13 @@ let ing = {
 
 const gbutton = document.getElementById("gbutton");
 const sbutton = document.getElementById("share");
-
-sbutton.style.visibility = "hidden";
+sbutton.style.visibility = "hidden"; // hide share button by default, is not hidden in html
 
 gbutton.addEventListener("click", generate);
 
 function generate(){
     document.querySelectorAll('.temp').forEach(e => e.remove()) // clear out all images inserted after previous generation
-    sbutton.style.visibility="hidden";
+    sbutton.style.visibility="hidden"; // hide share button
 
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
@@ -182,7 +181,7 @@ function generate(){
     document.getElementById("base").innerHTML = "In a " + myBase.splash + ", add the following protiens: " + myProtsStr;
     document.getElementById("topp").innerHTML = "Then, add the following toppings: " + myToppsStr;
 
-    sbutton.style.visibility = "visible";
+    sbutton.style.visibility = "visible";   // show share button. when pressed, copy text to clipboard and update message
     sbutton.addEventListener("click", share);
     function share(){
         navigator.clipboard.writeText("In a " + myBase.splash + ", add the following protiens: " + myProtsStr + ". Then, add the following toppings: " + myToppsStr + ".");
