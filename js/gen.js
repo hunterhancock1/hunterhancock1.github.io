@@ -99,8 +99,8 @@ var vegF = document.getElementById("nv");
 const gbutton = document.getElementById("gbutton");
 
 function generate(){
-    var numProt = +document.getElementById("numProt");
-    var numTopp = +document.getElementById("numTopp");  
+    var numProt = document.getElementById("numProt").value;
+    var numTopp = document.getElementById("numTopp").value;  
     var myBase = ing.base[Math.floor(Math.random() * 5)];
 
     document.getElementById("field").innerHTML = myBase.splash + " prot: " + numProt + " topp: " + numTopp;
