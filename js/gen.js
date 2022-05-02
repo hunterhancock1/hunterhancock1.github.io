@@ -133,8 +133,6 @@ let ing = {
     ]
 }
 
-// var vegtf = document.getElementById("v").value;
-
 const gbutton = document.getElementById("gbutton");
 
 gbutton.addEventListener("click", generate);
@@ -142,11 +140,11 @@ gbutton.addEventListener("click", generate);
 function generate(){
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
-
     var myVeg = document.querySelector('input[name=veg]:checked').value;
-    var myBase = ing.base[Math.floor(Math.random() * 6)];
 
-    document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
+    window.location.reload();
+
+    var myBase = ing.base[Math.floor(Math.random() * 6)]; 
 
     var myProts = [];
     if(myVeg == 2){
@@ -176,6 +174,8 @@ function generate(){
     for (let i = 1; i < myTopps.length; i++){
         myToppsStr += ", " + myTopps[i].splash;     
     }
+
+    document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
 
     document.getElementById("prot").innerHTML = "Add the following protiens: ";
     document.getElementById("prot").innerHTML += myProtsStr;

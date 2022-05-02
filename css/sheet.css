@@ -70,10 +70,17 @@ label {
 
 #topppng {
     display: inline-block;
+    margin: auto;
 }
 
 #protpng {
     display: inline-block;
+    margin: auto;
+}
+
+#basepng {
+    display: block;
+    margin: auto;
 }
 
 [class*="col-"] {
