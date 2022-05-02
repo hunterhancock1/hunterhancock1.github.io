@@ -31,13 +31,15 @@
                 <h4>Number of Base Proteins</h4>
                 <form>
                     <input type="range" min="0" max="5" value="1" class="slider" id="numProt" oninput="this.nextElementSibling.value = this.value">
-                    <output>0</output>
+                    <output>1</output>
                 </form>
                 <h4>Number of Toppings</h4>
                 <form>
                     <input type="range" min="0" max="9" value="0" class="slider" id="numTopp" oninput="this.nextElementSibling.value = this.value">
                     <output>0</output>
                 </form>
+                <button id="gbutton">Generate</button>
+                <p id="field"></p>
             </div>
 
             <div class="col-2"></div>
