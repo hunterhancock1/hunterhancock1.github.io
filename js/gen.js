@@ -178,21 +178,21 @@ function generate(){
     document.getElementById("base").innerHTML = "In a " + myBase.splash + ", add the following protiens: " + myProtsStr;
     document.getElementById("topp").innerHTML = "Then, add the following toppings: " + myToppsStr;
 
-    for (let i = 0; i < myTopps.length; i++){
+    for (let i = 0; i < myTopps.length; i++){   // loop through myTopps, append image of each one
         var toppimg = document.createElement('img');
         toppimg.src = myTopps[i].src;
         toppimg.className = "temp";
         document.getElementById('topp0').appendChild(toppimg);
     }
 
-    for (let i = 0; i < myProts.length; i++){
+    for (let i = 0; i < myProts.length; i++){   // loop through myProts, append image of each one 
         var protimg = document.createElement('img');
         protimg.src = myProts[i].src;
         protimg.className = "temp";
         document.getElementById('prot0').appendChild(protimg);
     }
 
-    var baseimg = document.createElement('img');
+    var baseimg = document.createElement('img');    // append base image
     baseimg.src = myBase.src;
     baseimg.className = "temp";
     document.getElementById("base0").appendChild(baseimg);
