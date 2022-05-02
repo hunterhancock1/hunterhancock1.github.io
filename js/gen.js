@@ -136,7 +136,7 @@ function generate(){
         }
     }
     var myProtsStr = myProts[0].splash;
-    for (let i = 1; i < numProt; i++){
+    for (let i = 1; i < myProts.length; i++){
         myProtsStr += ", " + myProts[i].splash;
     }
 
@@ -147,15 +147,15 @@ function generate(){
         numTopp--;
     }
     var myToppsStr = myTopps[0].splash;
-    for (let i = 0; i < numTopp; i++){
+    for (let i = 0; i < myTopps.length; i++){
         myToppsStr += ", " + myTopps[i].splash;     
     }
 
     document.getElementById("prot").innerHTML = "Add the following protiens in order: ";
-    document.getElementById("prot").innerHTML = myProtsStr;
+    document.getElementById("prot").innerHTML += myProtsStr;
 
     document.getElementById("topp").innerHTML = "Then, add the following toppings in order: ";
-    document.getElementById("topp").innerHTML = myToppsStr;
+    document.getElementById("topp").innerHTML += myToppsStr;
     
     console.log(myVeg);
 
