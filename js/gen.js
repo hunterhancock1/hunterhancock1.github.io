@@ -135,25 +135,28 @@ function generate(){
             numProt--;
         }
     }
-    
+    var myProtsStr = myProts[0].splash;
+    for (let i = 1; i < numProt; i++){
+        myProtsStr += ", " + myProts[i].splash;
+    }
+
+
     var myTopps = [];
     while (numTopp) {
         myTopps.push(ing.topping[Math.floor(Math.random() * 9)]);
         numTopp--;
     }
-
-    document.getElementById("prot").innerHTML = "Add the following protiens in order: "
-    document.getElementById("prot").innerHTML += myProts[0].splash;
-    for (let i = 1; i < numProt; i++){
-        document.getElementById("prot").innerHTML += ", " + myProts[i].splash;
-    }
-    document.getElementById("prot").innerHTML += ".";
-
-    document.getElementById("topp").innerHTML = "Then, add the following toppings in order: "
-    document.getElementById("topp").innerHTML += myTopps[0].splash;
+    var myToppsStr = myTopps[0].splash;
     for (let i = 0; i < numTopp; i++){
-        document.getElementById("topp").innerHTML += ", " + myTopps[i].splash;     
+        myToppsStr += ", " + myTopps[i].splash;     
     }
+
+    document.getElementById("prot").innerHTML = "Add the following protiens in order: ";
+    document.getElementById("prot").innerHTML = myProtsStr;
+
+    document.getElementById("topp").innerHTML = "Then, add the following toppings in order: ";
+    document.getElementById("topp").innerHTML = myToppsStr;
+    
     console.log(myVeg);
 
 }
