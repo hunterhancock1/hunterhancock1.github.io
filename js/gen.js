@@ -197,7 +197,7 @@ function generate(){
 
     var baseimg = document.createElement('img');
     baseimg.src = myBase.src;
-    document.getElementById("protpng").appendChild(baseimg);
+    document.getElementById("base0").appendChild(baseimg);
     
     console.log(myVeg);
 
