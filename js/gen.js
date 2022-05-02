@@ -139,7 +139,12 @@ gbutton.addEventListener("click", generate);
 
 function generate(){
     var elements = document.getElementById("temp");
-    elements.parentNode.removeChild(elements);
+    if (elements == null) {
+        console.log("No elements, first generation?");
+    }
+    else {
+        elements.parentNode.removeChild(elements);
+    }
 
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
