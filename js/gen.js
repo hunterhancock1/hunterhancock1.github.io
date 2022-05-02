@@ -98,7 +98,7 @@ var vegF = document.getElementById("nv");
 
 const gbutton = document.getElementById("gbutton");
 
-gbutton.addEventListener("click", generate());
+gbutton.addEventListener("click", generate);
 
 function generate(){
     var numProt = document.getElementById("numProt").value;
