@@ -3,12 +3,12 @@ let ing = {
         {
             "id": "staco",
             "v": true,
-            "splash": "Soft taco shell"
+            "splash": "Soft Taco Shell"
         },
         {
             "id": "ctaco",
             "v": true,
-            "splash": "Crunchy taco shell"
+            "splash": "Crunchy Taco Shell"
         },
         {
             "id": "burrito",
@@ -18,7 +18,7 @@ let ing = {
         {
             "id": "chalupa",
             "v": true,
-            "splash": "Chalupa shell"
+            "splash": "Chalupa Shell"
         },
         {
             "id": "bowl",
@@ -38,24 +38,29 @@ let ing = {
             "splash": "Potatoes"
         },
         {
-            "id": "bean",
+            "id": "bbean",
             "v": true,
-            "splash": "Black beans"
+            "splash": "Black Beans"
         },
         {
-            "id": "ground beef",
+            "id": "rbean",
+            "v": true,
+            "splash": "Refried Beans"
+        },
+        {
+            "id": "groundbeef",
             "v": false,
-            "splash": "Seasoned ground beef"
+            "splash": "Seasoned Ground Beef"
         },
         {
             "id": "chicken",
             "v": false,
-            "splash": "Grilled chicken" 
+            "splash": "Grilled Chicken" 
         },
         {
             "id": "steak",
             "v": false,
-            "splash": "Grilled steak" 
+            "splash": "Grilled Steak" 
         }
     ],
     "topping": [
@@ -77,27 +82,27 @@ let ing = {
         {
             "id": "bbeans",
             "v": true,
-            "splash": "Black beans"
+            "splash": "Black Beans"
         },
         {
             "id": "rbeans",
             "v": true,
-            "splash": "Refried beans"
+            "splash": "Refried Beans"
         },
         {
             "id": "sour cream",
             "v": true,
-            "splash": "Sour cream"
+            "splash": "Sour Cream"
         },
         {
             "id": "nacho cheese",
             "v": true,
-            "splash": "Nacho cheese sauce"
+            "splash": "Nacho Cheese Sauce"
         },
         {
             "id": "red sauce",
             "v": true,
-            "splash": "Red sauce"
+            "splash": "Red Sauce"
         },
         {
             "id": "guac",
@@ -125,13 +130,13 @@ function generate(){
     var myProts = [];
     if(myVeg == 2){
         while (numProt) {
-            myProts.push(ing.protein[Math.floor(Math.random() * 2)]);
+            myProts.push(ing.protein[Math.floor(Math.random() * 3)]);
             numProt--;
         }
     }
     else{
         while (numProt) {
-            myProts.push(ing.protein[Math.floor(Math.random() * 5)]);
+            myProts.push(ing.protein[Math.floor(Math.random() * 6)]);
             numProt--;
         }
     }
