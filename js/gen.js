@@ -142,7 +142,7 @@ function generate(){
     var numTopp = document.getElementById("numTopp").value;  
     var myVeg = document.querySelector('input[name=veg]:checked').value;
 
-    window.location.reload();
+    //window.location.reload();
 
     var myBase = ing.base[Math.floor(Math.random() * 6)]; 
 
@@ -198,8 +198,5 @@ function generate(){
     var baseimg = document.createElement('img');
     baseimg.src = myBase.src;
     document.getElementById("base0").appendChild(baseimg);
-    
-    console.log(myVeg);
-
 }
 
