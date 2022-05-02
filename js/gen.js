@@ -95,27 +95,14 @@ let ing = {
 
 var vegT = document.getElementById("yv");
 var vegF = document.getElementById("nv");
-var numProt = document.getElementById("numProt");
-var numTopp = document.getElementById("numTopp");
 
-function generate(v, numProt, numTopp) {
-    console.log(vegT, vegF, numProt, numTopp);
-    const base = Math.floor(Math.random() * 6); // ind of base
-    if(v) { // vegetarian
-        var prot = Math.floor(Math.random() * 5); // ind of prot (1-5)
-    }
-    else { // non-veg
-        var prot = 3 + Math.floor(Math.random() * 2); // ind of prot (4-5)
-    }
-    
-    var toppings = [];
-    var sauces = [];
+const gbutton = document.getElementById("gbutton");
+
+async function generate(){
+    var numProt = document.getElementById("numProt");
+    var numTopp = document.getElementById("numTopp");  
+    var myBase = ing.base[Math.floor(Math.random() * 5)];
+
+    document.getElementById("field").innerHTML = myBase.splash + " prot: " + numProt + " topp: " + numTopp;
 }
-
-var inputElement = document.createElement('input');
-inputElement.type = "button"
-inputElement.addEventListener('click', function(){
-    // func
-});
-
-​document.body.appendChild(inputElement);​
+gbutton.addEventListener("click", generate());
