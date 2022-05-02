@@ -71,16 +71,19 @@ label {
 #topppng {
     display: inline-block;
     margin: auto;
+    justify-content: center;
 }
 
 #protpng {
     display: inline-block;
     margin: auto;
+    justify-content: center;
 }
 
 #basepng {
     display: block;
     margin: auto;
+    justify-content: center;
 }
 
 [class*="col-"] {
