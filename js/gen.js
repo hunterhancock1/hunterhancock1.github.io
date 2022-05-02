@@ -123,7 +123,7 @@ function generate(){
     document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
 
     var myProts = [];
-    if(myVeg){
+    if(myVeg == 2){
         while (numProt) {
             myProts.push(ing.protein[Math.floor(Math.random() * 2)]);
             numProt--;
@@ -154,7 +154,7 @@ function generate(){
     for (let i = 0; i < numTopp; i++){
         document.getElementById("topp").innerHTML += ", " + myTopps[i].splash;     
     }
-    //console.log(myVeg);
+    console.log(myVeg);
 
 }
 
