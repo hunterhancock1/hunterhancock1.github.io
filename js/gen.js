@@ -138,6 +138,9 @@ const gbutton = document.getElementById("gbutton");
 gbutton.addEventListener("click", generate);
 
 function generate(){
+    var elements = document.getElementById("temp");
+    elements.parentNode.removeChild(elements);
+
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
     var myVeg = document.querySelector('input[name=veg]:checked').value;
@@ -186,17 +189,20 @@ function generate(){
     for (let i = 0; i < myTopps.length; i++){
         var toppimg = document.createElement('img');
         toppimg.src = myTopps[i].src;
+        toppimg.id = "temp";
         document.getElementById('topp0').appendChild(toppimg);
     }
 
     for (let i = 0; i < myProts.length; i++){
         var protimg = document.createElement('img');
         protimg.src = myProts[i].src;
+        protimg.id = "temp";
         document.getElementById('prot0').appendChild(protimg);
     }
 
     var baseimg = document.createElement('img');
     baseimg.src = myBase.src;
+    baseimg.id = "temp";
     document.getElementById("base0").appendChild(baseimg);
 }
 
