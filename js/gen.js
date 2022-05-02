@@ -138,30 +138,28 @@ const gbutton = document.getElementById("gbutton");
 gbutton.addEventListener("click", generate);
 
 function generate(){
-    document.querySelectorAll('.temp').forEach(e => e.remove())
+    document.querySelectorAll('.temp').forEach(e => e.remove()) // clear out all images inserted after previous generation
 
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
-    var myVeg = document.querySelector('input[name=veg]:checked').value;
+    var myVeg = document.querySelector('input[name=veg]:checked').value; // 2 if vegetarian, 1 if not
 
-    //window.location.reload();
-
-    var myBase = ing.base[Math.floor(Math.random() * 6)]; 
+    var myBase = ing.base[Math.floor(Math.random() * 6)]; // one of 6 bases selected randomly
 
     var myProts = [];
     if(myVeg == 2){
         while (numProt) {
-            myProts.push(ing.protein[Math.floor(Math.random() * 3)]);
+            myProts.push(ing.protein[Math.floor(Math.random() * 3)]);   // if veg, fill myProts with numProt items, selected from first 3 (the vegetarian) proteins
             numProt--;
         }
     }
     else{
         while (numProt) {
-            myProts.push(ing.protein[Math.floor(Math.random() * 6)]);
+            myProts.push(ing.protein[Math.floor(Math.random() * 6)]);   // if not veg, select from all proteins
             numProt--;
         }
     }
-    var myProtsStr = myProts[0].splash;
+    var myProtsStr = myProts[0].splash; // myProts listed in format ___, ___, ___
     for (let i = 1; i < myProts.length; i++){
         myProtsStr += ", " + myProts[i].splash;
     }
@@ -169,21 +167,16 @@ function generate(){
 
     var myTopps = [];
     while (numTopp) {
-        myTopps.push(ing.topping[Math.floor(Math.random() * 9)]);
+        myTopps.push(ing.topping[Math.floor(Math.random() * 9)]);   // fill myTopps with numTopp items, selected from all toppings
         numTopp--;
     }
-    var myToppsStr = myTopps[0].splash;
+    var myToppsStr = myTopps[0].splash; // myTopps listed in format ___, ___, ___
     for (let i = 1; i < myTopps.length; i++){
         myToppsStr += ", " + myTopps[i].splash;     
     }
 
-    document.getElementById("base").innerHTML = "In a " + myBase.splash + ":";
-
-    document.getElementById("prot").innerHTML = "Add the following protiens: ";
-    document.getElementById("prot").innerHTML += myProtsStr;
-
-    document.getElementById("topp").innerHTML = "Then, add the following toppings: ";
-    document.getElementById("topp").innerHTML += myToppsStr;
+    document.getElementById("base").innerHTML = "In a " + myBase.splash + ", add the following protiens: " + myProtsStr;
+    document.getElementById("topp").innerHTML = "Then, add the following toppings: " + myToppsStr;
 
     for (let i = 0; i < myTopps.length; i++){
         var toppimg = document.createElement('img');
