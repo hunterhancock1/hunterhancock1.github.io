@@ -138,9 +138,7 @@ const gbutton = document.getElementById("gbutton");
 gbutton.addEventListener("click", generate);
 
 function generate(){
-    var elements = document.getElementsByClassName("temp");
-    if (elements == null) { console.log("No elements to remove, first generation?"); }
-    else { elements.parentNode.removeChild(elements); }
+    document.querySelectorAll('.temp').forEach(e => e.remove())
 
     var numProt = document.getElementById("numProt").value;
     var numTopp = document.getElementById("numTopp").value;  
