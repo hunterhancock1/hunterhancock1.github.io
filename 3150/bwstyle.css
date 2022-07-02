@@ -64,10 +64,12 @@ body > * {
   padding: 1%;
 }
 
-main, header, nav, article, aside, footer, section {
-  background-color: rgba(0,255,0,0.5);
-  padding: 1%;
-}
+header {grid-area: heady; background:rgb(254, 218, 175);}
+main {grid-area: mainy; background: rgb(240, 234, 182); max-height: 100%;}
+#aside1 {grid-area: aside1; background: rgb(241, 202, 174);}
+#aside2 {grid-area: aside2; background: rgb(191, 226, 246);}
+footer {grid-area: footy; background: rgb(171, 171, 171);}
+
 
 h1 {
   flex: 5;
@@ -154,3 +156,21 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(175, 222, 176);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:
+     1fr       2fr       1fr;
+    grid-template-areas:
+    "heady     heady     heady"
+    "navvy     navvy     navvy"
+    "aside1    mainy     aside2"
+    "aside1    mainy     aside2"
+    "aside1    mainy     aside2"
+    "footy     footy     footy";
+  }
