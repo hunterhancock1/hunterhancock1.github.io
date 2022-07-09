@@ -12,6 +12,7 @@
 div#formcol1 {
 	float:left;	
 	width: 100%;
+	list-style:none;
 }
 
 
@@ -24,9 +25,6 @@ label {
  
 /* we place the id formcol1 in front of the li element in order to limit this formatting to the top part of the form */
  
-#formcol1 li {  
-​	list-style:none;
-}
 
 select:focus, 
 select:active, 
